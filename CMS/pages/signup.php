@@ -64,7 +64,7 @@
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <!-- <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Register</button> -->
-                    <input type="submit" value="REGISTER" class="bt btn-lg btn-primary" name="btn_signup">
+                    <input type="submit" value="REGISTER" class="bt btn-lg btn-dark" name="btn_signup">
                 </div>
 
                 </form>

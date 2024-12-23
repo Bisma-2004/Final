@@ -1,17 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../assert/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../assert/css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body>
-<?php
+
+<body id="page-top">
+
+<div class="main">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-warning sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SD  <sup>*</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+
+    
+
+         
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+          
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+              
+                    <div>
+                    <?php
 require("connect.php");
 
 if(isset($_GET['id'])){
@@ -26,9 +82,9 @@ if(isset($_GET['id'])){
 <div class="container p-3">
     <div class="row">
         <div class="col">
-        <div class="bg-success text-white text-center rounded p-2 m-2 display-5">Admission form</div>
+        <div class="bg-warning text-white text-center rounded p-3  m-2  display-5"><h3>Update</h3></div>
             <form action="update.php" method="post" enctype="multipart/form-data">
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col">
                         <!-- name -->
                 <input type="hidden" name="id" class="form-control" value="<?php echo $row['ID']; ?>">
@@ -42,7 +98,7 @@ if(isset($_GET['id'])){
                     </div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
                             <!-- address -->
                             <label for="" class="form-label">Address</label>
@@ -50,7 +106,7 @@ if(isset($_GET['id'])){
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
                             <!-- age -->
                             <label for="" class="form-label">Age</label>
@@ -63,7 +119,7 @@ if(isset($_GET['id'])){
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
                             <!-- dom -->
                             <label for="" class="form-label">Domicile</label>
@@ -76,7 +132,7 @@ if(isset($_GET['id'])){
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
                             <!-- num -->
                              <label for="" class="form-label">Phone No</label>
@@ -89,7 +145,7 @@ if(isset($_GET['id'])){
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
                             <!-- email -->
                             <label for="" class="form-label">Email ID</label>
@@ -97,7 +153,7 @@ if(isset($_GET['id'])){
                         </div>
                     </div>
 
-                    <div class="row mb-2">
+                    <div class="row mt-2">
                         <div class="col">
                             <!-- gender -->
                             <p>Gender</p>
@@ -114,19 +170,20 @@ if(isset($_GET['id'])){
                     </div>
 
                     
-                    <div class="row">
-                        <div class="col">
+                    <div class="row mt-2">
+                        <div class="col ml-2">
                             <!-- gender -->
-                            <p>Hobbies</p>
-                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>">Cricket
-                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>" >Editing
-                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>" >Cooking
-                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>" >Dancing
+                           <label for="">Hobbies</label><br>
+                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>">Cricket &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>" >Editing &nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>
+                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>" >Cooking &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" class="form-check-input" name="hoby[]" value="<?php echo $row["Hobby"];?>" >Dancing &nbsp;&nbsp;&nbsp;&nbsp; 
                             </div>
                         <div class="col">
                             <!-- trade -->
-                            <p>Country</p>
-                            <select name="dropdown" >
+                            <label for="">Country</label>
+                            <select name="dropdown" class="form-control">
                                 <option selected disabled>Choose country</option>
                                 <option value="Pakistan">Pakistan</option>
                                 <option value="Iran">Iran</option>
@@ -136,15 +193,15 @@ if(isset($_GET['id'])){
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col">
                             <!-- img -->
                             <label for="" class="form-label">Image</label>
-                            <input type="file" class="form-control" name="img" value="<?php echo $row["Image"];?>" required>
+                            <input type="file" class="form-control-file" name="img" value="<?php echo $row["Image"];?>" required>
                         </div>
                     </div>
                     <!-- btn_submit -->
-                    <input type="submit" class="btn btn-lg btn-outline-success mt-3" name="btn_submit">
+                    <input type="submit" value="Insert" class="btn btn-lg btn-outline-warning mt-3" name="btn_submit">
                     <!-- form end -->
                 </form>
         </div>
@@ -181,7 +238,76 @@ if(isset($_POST['btn_submit'])){
 }
 
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+                    </div>
+                   
+                    
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+<!-- end .main container -->
+</div>    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../assert/vendor/jquery/jquery.min.js"></script>
+    <script src="../assert/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../assert/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../assert/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../assert/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../assert/js/demo/chart-area-demo.js"></script>
+    <script src="../assert/js/demo/chart-pie-demo.js"></script>
+
 </body>
+
 </html>

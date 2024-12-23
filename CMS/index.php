@@ -55,7 +55,7 @@
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <!-- <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Register</button> -->
-                     <input type="submit" value="LOGIN" name="btn_login" class="btn btn-lg btn-primary" >
+                     <input type="submit" value="LOGIN" name="btn_login" class="btn btn-lg btn-dark" >
                   </div>
 
                 </form>
