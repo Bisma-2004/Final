@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (empty($_SESSION['emaill'])) {
+    header("Location: ../index.php");
+    exit();
+}else{
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +24,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom styles for this template-->
     <link href="../assert/css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -36,15 +44,32 @@
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard1.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
-</div>
-            </a>      
-         
-
+                </div>
+            </a>    
         </ul>
        
+        
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
-      
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <h1>Enter Your Data Here...</h1>   
+                    
+                    <div class="ml-auto">
+                            <a href="logout.php" onclick="return confirm('Are you sure you want to logout?')"><i class="bi bi-box-arrow-right fa-lg"></i></a>   
+                    </div>
                 </nav>
+
+
 <div class="container-fluid  ">
     <div class="row">
         <div class="col">
@@ -244,3 +269,4 @@
 </body>
 
 </html>
+<?php } ?>

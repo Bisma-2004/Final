@@ -32,7 +32,7 @@ if(isset($_POST["btn_login"]))
     $data = mysqli_query($connect,$select);
     if(mysqli_num_rows($data)>0){
         $_SESSION["emaill"] = $email;
-        header("location: dashboard1.php");
+        header("location: welcome.php");
     }
     else{
         header("location: ../index.php?Error=Email and Password is not correct");
